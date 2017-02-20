@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../services/crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar',
@@ -12,7 +13,7 @@ export class CriarComponent implements OnInit {
   conhecimento: DTO.Conhecimento;
   step: number;
 
-  constructor(private _service: CrudService) {  
+  constructor(private _service: CrudService, private _router: Router) {  
     this.step = 1;
     this.candidato =  <DTO.Candidato> new Object();
     this.banco = <DTO.Banco> new Object();
@@ -27,7 +28,7 @@ export class CriarComponent implements OnInit {
     this.candidato.Conhecimento = this.conhecimento;
     this._service.cadastraCandidatos(this.candidato).subscribe(
       data => {
-
+        this._router.navigate(['/']);
       }
     );
   }

@@ -20,7 +20,7 @@ export class HttpHelper {
                 parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
             }
         }
-        return parts? "?" + parts.join('&'): "";
+        return parts ? "?" + parts.join('&') : "";
     }
 
     getaction<T>(path: string, body: any = null) {
@@ -43,6 +43,14 @@ export class HttpHelper {
             .catch(this._handleError);
     }
 
+    delete<T>(path: string, body: any = null) {
+        return this._http.delete(this._base + path + this.obj_to_query(body))
+        .map(res => {
+            return <T>res.json();
+        })
+        .catch(this._handleError);
+    }
+
     private _handleError(error: Response) {
         if (error.status == 401) {
             localStorage.removeItem('currentUser');
@@ -60,7 +68,7 @@ export class HttpHelper {
         } catch (ex) {
             return success;
         }
-       
+
         return jsonresult;
     }
 }

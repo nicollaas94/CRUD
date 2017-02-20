@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Core.Model;
 using Core.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core.Controllers
 {
@@ -27,6 +28,20 @@ namespace Core.Controllers
             this.context.Candidatos.Add(cand);
             this.context.SaveChanges();
             return Ok();
+        }
+
+        public IActionResult excluir(int candidatoId)
+        {
+            var candidato = this.context.Candidatos.Where(c => c.CandidatoId == candidatoId).SingleOrDefault();
+            this.context.Remove(candidato);
+            this.context.SaveChanges();
+            return Ok();
+        }
+        
+        public IActionResult pegarCandidato(int candidatoId)
+        {
+            var candidato = this.context.Candidatos.Include(c => c.Banco).Include(c => c.Conhecimento).Where(c => c.CandidatoId == candidatoId).SingleOrDefault();
+            return candidato.ToJsonResult();
         }
     }
 }

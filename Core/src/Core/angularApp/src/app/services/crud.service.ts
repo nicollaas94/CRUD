@@ -8,7 +8,9 @@ import 'rxjs/Rx';
 export class CrudService extends HttpHelper {
 
     private _carregaCandidatos = 'crud/listar';
+    private _carregaCandidatoEspecifico = 'crud/pegarCandidato';
     private _cadastraCandidato = 'crud/cadastrar';
+    private _excluirCandidato = 'crud/excluir';
 
     constructor(private http: Http) {
         super(http);
@@ -31,6 +33,25 @@ export class CrudService extends HttpHelper {
         ).catch(err => { return Observable.throw(err || 'Server error'); });
         return result;
 
+    }
+    excluirCandidato(idCandidato: number): Observable<Boolean> {
+        let result = this.delete(this._excluirCandidato, { candidatoId: idCandidato }).map(
+            result => {
+                let tmp = result;
+                return tmp;
+            }
+        ).catch(err => { return Observable.throw(err || 'Server error'); });
+        return result;
+    }
+
+    carregaCandidatoEspecifico(candidatoId: number): Observable<DTO.Candidato> {
+        let result = this.getaction(this._carregaCandidatoEspecifico, { candidatoId: candidatoId }).map(
+            result => {
+                let tmp = <DTO.Candidato>result;
+                return tmp;
+            }
+        ).catch(err => { return Observable.throw(err || 'Server error'); });
+        return result;
     }
 
 }

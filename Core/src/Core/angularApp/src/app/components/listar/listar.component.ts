@@ -42,4 +42,12 @@ export class ListarComponent implements OnInit {
     );
   }
 
+  excluirUsuario(idCandidato: number){
+    this._service.excluirCandidato(idCandidato).subscribe(
+      data => {
+        this.listarCandidatos();
+      }
+    )
+  }
+
 }
