@@ -1,0 +1,33 @@
+﻿<!--<base href="/">
+<ul class="navegacao">
+    <li><a href="#" routerLink="/" routerLinkActive="active">Inicio</a> </li>
+    <li><a href="#" routerLink="/funcoes" routerLinkActive="active">Funcoes Basicas Angular</a> </li>
+    <li><a href="#" routerLink="/completo" routerLinkActive="active">Componente completo</a></li>
+</ul>-->
+
+
+<aside class="main-sidebar hidden-print">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 563px;">
+        <section class="sidebar" style="overflow: hidden; width: auto; height: 563px;">
+            <div class="user-panel">
+                <div class="pull-left image"><img src="#" alt="User Image" class="img-circle"></div>
+                <div class="pull-left info">
+                    <p>By Nicollas Braga</p>
+                    <p class="designation">Crud System</p>
+                </div>
+            </div>
+
+
+            <!-- Sidebar Menu-->
+            <ul class="sidebar-menu">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a href="#" routerLink="/"><i class="fa fa-television"></i><span>Listagem</span></a></li>
+                <li routerLinkActive="active"><a href="#" routerLink="/criar"><i class="fa fa-table"></i><span>Criar Novo</span></a></li>
+                <li routerLinkActive="active"><a href="#" routerLink="/editar"><i class="fa fa-dashboard"></i><span>Editar</span></a></li>
+                <li routerLinkActive="active"><a href="#" routerLink="/excluir"><i class="fa fa-dashboard"></i><span>Colaboradores</span></a></li>
+            </ul>
+        </section>
+        <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.8); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 563px;">
+        </div>
+        <div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+    </div>
+</aside>

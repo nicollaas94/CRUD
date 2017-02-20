@@ -1,0 +1,53 @@
+<header-component>
+</header-component>
+
+<index-component></index-component>
+
+<div class="content-wrapper">
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-th-list"></i> Candidatos</h1>
+            <p>Listagem de candidatos</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li routerLink="/"><a href="#">Candidatos</a></li>
+                <!--<li class="active"><a href="#">Pedido</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-md-12">
+            <button [routerLink]="['/criar']" class="btn btn-xs btn-success pull-right">Novo Candidato</button>
+            <div class="col-md-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-3">Nome</th>
+                            <th class="col-md-2">Telefone</th>
+                            <th class="col-md-3">Endereco</th>
+                            <th class="col-md-1">Salário</th>
+                            <th class="col-md-2 text-right">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of candidatos;let i = index">
+                            <td>{{row.CandidatoId}}</td>
+                            <td>{{row.Nome}}</td>
+                            <td>{{row.Telefone}}</td>
+                            <td>{{row.Cidade}}-{{row.Estado}}</td>
+                            <td>{{row.Salario | currency: 'BRL' : true }}/Hora</td>
+                            <td class="text-right">
+                                <button [routerLink]="['/detalhes',row.CandidatoId]" class="btn btn-xs btn-default" *ngIf="urlpath == 'listar'">Ver detalhes</button>
+                                <button [routerLink]="['/editar',row.CandidatoId]" class="btn btn-xs btn-default" *ngIf="urlpath == 'editar'">Editar</button>
+                                <button class="btn btn-xs btn-default" *ngIf="urlpath == 'excluir'" (click)="excluirUsuario(row.CandidatoId)">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

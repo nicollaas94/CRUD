@@ -1,0 +1,1065 @@
+<header-component>
+</header-component>
+
+<index-component></index-component>
+
+<div class="content-wrapper">
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-th-list"></i> Candidatos</h1>
+            <p>Adicionar um novo candidato</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li routerLink="/"><a href="#">Candidatos</a></li>
+                <li class="active"><a href="#">adicionar</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--INFORMAÇÕES DO CANDIDATO-->
+        <div class="card col-md-12" *ngIf="step == 1">
+            <div class="form-group col-md-12">
+                <label>Email</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Email" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Nome</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Nome" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Skype</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Skype" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Telefone</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Telefone" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Linkedin</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Linkedin" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Cidade</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Cidade" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Estado</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Estado" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Portifolio</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Portifolio" />
+            </div>
+            <div class="form-group input-controls col-md-12">
+                <label>Qual é sua disponibilidade para trabalhar hoje? *</label>
+                <div>
+                    <label>
+                        <input #dsp1 name="dispo" type="radio" value="1" (click)="candidato.Disponibilidade = dsp1.value" />
+                        Até 4 horas por dia
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #dsp2 name="dispo" type="radio" value="2" (click)="candidato.Disponibilidade = dsp2.value" />
+                        De 4 á 6 horas por dia
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #dsp3 name="dispo" type="radio" value="3" (click)="candidato.Disponibilidade = dsp3.value" />
+                        De 6 á 8 horas por dia
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #dsp4 name="dispo" type="radio" value="4" (click)="candidato.Disponibilidade = dsp4.value" />
+                        Acima de 8 horas por dia (tem certeza?)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #dsp5 name="dispo" type="radio" value="5" (click)="candidato.Disponibilidade = dsp5.value" />
+                        Apenas finais de semana
+                    </label>
+                </div>
+            </div>
+            <div class="form-group input-controls col-md-12">
+                <label>Pra você qual é o melhor horário para trabalhar? *</label>
+                <div>
+                    <label>
+                        <input #wrk1 name="periodo" type="radio" value="1" (click)="candidato.Periodo = wrk1.value" />
+                        Manhã (de 08:00 ás 12:00)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #wrk2 name="periodo" type="radio" value="2" (click)="candidato.Periodo = wrk2.value" />
+                        Tarde (de 13:00 ás 18:00)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #wrk3 name="periodo" type="radio" value="3" (click)="candidato.Periodo = wrk3.value" />
+                        Noite (de 19:00 as 22:00)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #wrk4 name="periodo" type="radio" value="4" (click)="candidato.Periodo = wrk4.value" />
+                        Madrugada (de 22:00 em diante)
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #wrk5 name="periodo" type="radio" value="5" (click)="candidato.Periodo = wrk5.value" />
+                        Comercial (de 08:00 as 18:00)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Salário</label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.Salario" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>
+                  Bank Information / Paypal / Itau etc
+                  <p><small>Banco brasileiro precisa: Nome, CPF, Banco, Agencia, Conta Corrente ou Poupanca</small></p>
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="candidato.InformacaoBancaria" />
+            </div>
+            <button class="btn btn-default pull-right" (click)="step = 2">Próximo</button>
+        </div>
+        <!--INFORMAÇÕES DO CANDIDATO-->
+        <!--INFORMAÇÕES BANCÁRIAS-->
+        <div class="card col-md-12" *ngIf="step == 2">
+            <div class="form-group col-md-12">
+                <label>Titular</label>
+                <input type="text" class="form-control" [(ngModel)]="banco.Titular" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Bank / Banco ( Itau, Bradesco, ect..)</label>
+                <input type="text" class="form-control" [(ngModel)]="banco.NomeBanco" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>CPF</label>
+                <input type="text" class="form-control" [(ngModel)]="banco.Cpf" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Agencia</label>
+                <input type="text" class="form-control" [(ngModel)]="banco.Agencia" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Account Type / Tipo de conta</label>
+                <div>
+                    <label>
+                        <input #tpcnt1 name="tpcnt" type="radio" value="1" (click)="banco.TipoConta = tpcnt1.value" />
+                        Chain / Corrente
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input #tpcnt2 name="tpcnt" type="radio" value="2" (click)="banco.TipoConta = tpcnt2.value" />
+                        Savings / Poupança
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Account Number / Número da conta</label>
+                <input type="text" class="form-control" [(ngModel)]="banco.NumeroConta" />
+            </div>
+
+            <button class="btn btn-default pull-left" (click)="step = 1">Anterior</button>
+            <button class="btn btn-default pull-right" (click)="step = 3">Próximo</button>
+        </div>
+        <!--INFORMAÇÕES BANCÁRIAS-->
+        <!--CONHECIMENTOS-->
+        <div class="card col-md-12" *ngIf="step == 3">
+            <p>Rate yourself from 0 to 5 for the knowledge specified below, and that's okay if you do not know many things, the important thing is to be honest! / Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber
+                de muitas coisas, o importante é que seja sincero!</p>
+            <div class="form-group col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-md-4">Nao conheco / I don't know</th>
+                                <th class="col-md-1">0</th>
+                                <th class="col-md-1">1</th>
+                                <th class="col-md-1">2</th>
+                                <th class="col-md-1">3</th>
+                                <th class="col-md-1">4</th>
+                                <th class="col-md-1">5</th>
+                                <th class="col-md-2">Senior</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ionic *</td>
+                                <td>
+                                    <label>
+                                      <input #ionic0 name="ionic" type="radio" value="0" (click)="conhecimento.Ionic = ionic0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #ionic1 name="ionic" type="radio" value="1" (click)="conhecimento.Ionic = ionic1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #ionic2 name="ionic" type="radio" value="2" (click)="conhecimento.Ionic = ionic2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #ionic3 name="ionic" type="radio" value="3" (click)="conhecimento.Ionic = ionic3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #ionic4 name="ionic" type="radio" value="4" (click)="conhecimento.Ionic = ionic4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #ionic5 name="ionic" type="radio" value="5" (click)="conhecimento.Ionic = ionic5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Android *</td>
+                                <td>
+                                    <label>
+                                      <input #Android0 name="Android" type="radio" value="0" (click)="conhecimento.Android = Android0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Android1 name="Android" type="radio" value="1" (click)="conhecimento.Android = Android1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Android2 name="Android" type="radio" value="2" (click)="conhecimento.Android = Android2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Android3 name="Android" type="radio" value="3" (click)="conhecimento.Android = Android3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Android4 name="Android" type="radio" value="4" (click)="conhecimento.Android = Android4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Android5 name="Android" type="radio" value="5" (click)="conhecimento.Android = Android5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>IOS *</td>
+                                <td>
+                                    <label>
+                                      <input #IOS0 name="IOS" type="radio" value="0" (click)="conhecimento.IOS = IOS0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #IOS1 name="IOS" type="radio" value="1" (click)="conhecimento.IOS = IOS1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #IOS2 name="IOS" type="radio" value="2" (click)="conhecimento.IOS = IOS2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #IOS3 name="IOS" type="radio" value="3" (click)="conhecimento.IOS = IOS3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #IOS4 name="IOS" type="radio" value="4" (click)="conhecimento.IOS = IOS4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #IOS5 name="IOS" type="radio" value="5" (click)="conhecimento.IOS = IOS5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HTML *</td>
+                                <td>
+                                    <label>
+                                      <input #HTML0 name="HTML" type="radio" value="0" (click)="conhecimento.HTML = HTML0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #HTML1 name="HTML" type="radio" value="1" (click)="conhecimento.HTML = HTML1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #HTML2 name="HTML" type="radio" value="2" (click)="conhecimento.HTML = HTML2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #HTML3 name="HTML" type="radio" value="3" (click)="conhecimento.HTML = HTML3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #HTML4 name="HTML" type="radio" value="4" (click)="conhecimento.HTML = HTML4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #HTML5 name="HTML" type="radio" value="5" (click)="conhecimento.HTML = HTML5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSS *</td>
+                                <td>
+                                    <label>
+                                      <input #CSS0 name="CSS" type="radio" value="0" (click)="conhecimento.CSS = CSS0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #CSS1 name="CSS" type="radio" value="1" (click)="conhecimento.CSS = CSS1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #CSS2 name="CSS" type="radio" value="2" (click)="conhecimento.CSS = CSS2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #CSS3 name="CSS" type="radio" value="3" (click)="conhecimento.CSS = CSS3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #CSS4 name="CSS" type="radio" value="4" (click)="conhecimento.CSS = CSS4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #CSS5 name="CSS" type="radio" value="5" (click)="conhecimento.CSS = CSS5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap *</td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap0 name="Bootstrap" type="radio" value="0" (click)="conhecimento.Bootstrap = Bootstrap0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap1 name="Bootstrap" type="radio" value="1" (click)="conhecimento.Bootstrap = Bootstrap1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap2 name="Bootstrap" type="radio" value="2" (click)="conhecimento.Bootstrap = Bootstrap2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap3 name="Bootstrap" type="radio" value="3" (click)="conhecimento.Bootstrap = Bootstrap3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap4 name="Bootstrap" type="radio" value="4" (click)="conhecimento.Bootstrap = Bootstrap4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Bootstrap5 name="Bootstrap" type="radio" value="5" (click)="conhecimento.Bootstrap = Bootstrap5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jquery *</td>
+                                <td>
+                                    <label>
+                                      <input #Jquery0 name="Jquery" type="radio" value="0" (click)="conhecimento.Jquery = Jquery0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Jquery1 name="Jquery" type="radio" value="1" (click)="conhecimento.Jquery = Jquery1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Jquery2 name="Jquery" type="radio" value="2" (click)="conhecimento.Jquery = Jquery2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Jquery3 name="Jquery" type="radio" value="3" (click)="conhecimento.Jquery = Jquery3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Jquery4 name="Jquery" type="radio" value="4" (click)="conhecimento.Jquery = Jquery4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Jquery5 name="Jquery" type="radio" value="5" (click)="conhecimento.Jquery = Jquery5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>AngularJs *</td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs0 name="AngularJs" type="radio" value="0" (click)="conhecimento.AngularJs = AngularJs0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs1 name="AngularJs" type="radio" value="1" (click)="conhecimento.AngularJs = AngularJs1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs2 name="AngularJs" type="radio" value="2" (click)="conhecimento.AngularJs = AngularJs2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs3 name="AngularJs" type="radio" value="3" (click)="conhecimento.AngularJs = AngularJs3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs4 name="AngularJs" type="radio" value="4" (click)="conhecimento.AngularJs = AngularJs4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AngularJs5 name="AngularJs" type="radio" value="5" (click)="conhecimento.AngularJs = AngularJs5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Java *</td>
+                                <td>
+                                    <label>
+                                      <input #Java0 name="Java" type="radio" value="0" (click)="conhecimento.Java = Java0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Java1 name="Java" type="radio" value="1" (click)="conhecimento.Java = Java1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Java2 name="Java" type="radio" value="2" (click)="conhecimento.Java = Java2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Java3 name="Java" type="radio" value="3" (click)="conhecimento.Java = Java3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Java4 name="Java" type="radio" value="4" (click)="conhecimento.Java = Java4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Java5 name="Java" type="radio" value="5" (click)="conhecimento.Java = Java5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>AspMvc *</td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc0 name="AspMvc" type="radio" value="0" (click)="conhecimento.AspMvc = AspMvc0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc1 name="AspMvc" type="radio" value="1" (click)="conhecimento.AspMvc = AspMvc1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc2 name="AspMvc" type="radio" value="2" (click)="conhecimento.AspMvc = AspMvc2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc3 name="AspMvc" type="radio" value="3" (click)="conhecimento.AspMvc = AspMvc3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc4 name="AspMvc" type="radio" value="4" (click)="conhecimento.AspMvc = AspMvc4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #AspMvc5 name="AspMvc" type="radio" value="5" (click)="conhecimento.AspMvc = AspMvc5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>C *</td>
+                                <td>
+                                    <label>
+                                      <input #C0 name="C" type="radio" value="0" (click)="conhecimento.C = C0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #C1 name="C" type="radio" value="1" (click)="conhecimento.C = C1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #C2 name="C" type="radio" value="2" (click)="conhecimento.C = C2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #C3 name="C" type="radio" value="3" (click)="conhecimento.C = C3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #C4 name="C" type="radio" value="4" (click)="conhecimento.C = C4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #C5 name="C" type="radio" value="5" (click)="conhecimento.C = C5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Cpp *</td>
+                                <td>
+                                    <label>
+                                      <input #Cpp0 name="Cpp" type="radio" value="0" (click)="conhecimento.Cpp = Cpp0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cpp1 name="Cpp" type="radio" value="1" (click)="conhecimento.Cpp = Cpp1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cpp2 name="Cpp" type="radio" value="2" (click)="conhecimento.Cpp = Cpp2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cpp3 name="Cpp" type="radio" value="3" (click)="conhecimento.Cpp = Cpp3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cpp4 name="Cpp" type="radio" value="4" (click)="conhecimento.Cpp = Cpp4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cpp5 name="Cpp" type="radio" value="5" (click)="conhecimento.Cpp = Cpp5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Cake *</td>
+                                <td>
+                                    <label>
+                                      <input #Cake0 name="Cake" type="radio" value="0" (click)="conhecimento.Cake = Cake0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cake1 name="Cake" type="radio" value="1" (click)="conhecimento.Cake = Cake1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cake2 name="Cake" type="radio" value="2" (click)="conhecimento.Cake = Cake2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cake3 name="Cake" type="radio" value="3" (click)="conhecimento.Cake = Cake3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cake4 name="Cake" type="radio" value="4" (click)="conhecimento.Cake = Cake4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Cake5 name="Cake" type="radio" value="5" (click)="conhecimento.Cake = Cake5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Django *</td>
+                                <td>
+                                    <label>
+                                      <input #Django0 name="Django" type="radio" value="0" (click)="conhecimento.Django = Django0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Django1 name="Django" type="radio" value="1" (click)="conhecimento.Django = Django1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Django2 name="Django" type="radio" value="2" (click)="conhecimento.Django = Django2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Django3 name="Django" type="radio" value="3" (click)="conhecimento.Django = Django3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Django4 name="Django" type="radio" value="4" (click)="conhecimento.Django = Django4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Django5 name="Django" type="radio" value="5" (click)="conhecimento.Django = Django5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Majento *</td>
+                                <td>
+                                    <label>
+                                      <input #Majento0 name="Majento" type="radio" value="0" (click)="conhecimento.Majento = Majento0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Majento1 name="Majento" type="radio" value="1" (click)="conhecimento.Majento = Majento1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Majento2 name="Majento" type="radio" value="2" (click)="conhecimento.Majento = Majento2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Majento3 name="Majento" type="radio" value="3" (click)="conhecimento.Majento = Majento3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Majento4 name="Majento" type="radio" value="4" (click)="conhecimento.Majento = Majento4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Majento5 name="Majento" type="radio" value="5" (click)="conhecimento.Majento = Majento5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PHP *</td>
+                                <td>
+                                    <label>
+                                      <input #PHP0 name="PHP" type="radio" value="0" (click)="conhecimento.PHP = PHP0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #PHP1 name="PHP" type="radio" value="1" (click)="conhecimento.PHP = PHP1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #PHP2 name="PHP" type="radio" value="2" (click)="conhecimento.PHP = PHP2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #PHP3 name="PHP" type="radio" value="3" (click)="conhecimento.PHP = PHP3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #PHP4 name="PHP" type="radio" value="4" (click)="conhecimento.PHP = PHP4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #PHP5 name="PHP" type="radio" value="5" (click)="conhecimento.PHP = PHP5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress *</td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress0 name="Wordpress" type="radio" value="0" (click)="conhecimento.Wordpress = Wordpress0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress1 name="Wordpress" type="radio" value="1" (click)="conhecimento.Wordpress = Wordpress1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress2 name="Wordpress" type="radio" value="2" (click)="conhecimento.Wordpress = Wordpress2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress3 name="Wordpress" type="radio" value="3" (click)="conhecimento.Wordpress = Wordpress3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress4 name="Wordpress" type="radio" value="4" (click)="conhecimento.Wordpress = Wordpress4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Wordpress5 name="Wordpress" type="radio" value="5" (click)="conhecimento.Wordpress = Wordpress5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Phyton *</td>
+                                <td>
+                                    <label>
+                                      <input #Phyton0 name="Phyton" type="radio" value="0" (click)="conhecimento.Phyton = Phyton0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Phyton1 name="Phyton" type="radio" value="1" (click)="conhecimento.Phyton = Phyton1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Phyton2 name="Phyton" type="radio" value="2" (click)="conhecimento.Phyton = Phyton2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Phyton3 name="Phyton" type="radio" value="3" (click)="conhecimento.Phyton = Phyton3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Phyton4 name="Phyton" type="radio" value="4" (click)="conhecimento.Phyton = Phyton4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Phyton5 name="Phyton" type="radio" value="5" (click)="conhecimento.Phyton = Phyton5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Ruby *</td>
+                                <td>
+                                    <label>
+                                      <input #Ruby0 name="Ruby" type="radio" value="0" (click)="conhecimento.Ruby = Ruby0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Ruby1 name="Ruby" type="radio" value="1" (click)="conhecimento.Ruby = Ruby1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Ruby2 name="Ruby" type="radio" value="2" (click)="conhecimento.Ruby = Ruby2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Ruby3 name="Ruby" type="radio" value="3" (click)="conhecimento.Ruby = Ruby3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Ruby4 name="Ruby" type="radio" value="4" (click)="conhecimento.Ruby = Ruby4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Ruby5 name="Ruby" type="radio" value="5" (click)="conhecimento.Ruby = Ruby5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MySqlServer *</td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer0 name="MySqlServer" type="radio" value="0" (click)="conhecimento.MySqlServer = MySqlServer0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer1 name="MySqlServer" type="radio" value="1" (click)="conhecimento.MySqlServer = MySqlServer1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer2 name="MySqlServer" type="radio" value="2" (click)="conhecimento.MySqlServer = MySqlServer2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer3 name="MySqlServer" type="radio" value="3" (click)="conhecimento.MySqlServer = MySqlServer3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer4 name="MySqlServer" type="radio" value="4" (click)="conhecimento.MySqlServer = MySqlServer4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySqlServer5 name="MySqlServer" type="radio" value="5" (click)="conhecimento.MySqlServer = MySqlServer5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MySql *</td>
+                                <td>
+                                    <label>
+                                      <input #MySql0 name="MySql" type="radio" value="0" (click)="conhecimento.MySql = MySql0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySql1 name="MySql" type="radio" value="1" (click)="conhecimento.MySql = MySql1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySql2 name="MySql" type="radio" value="2" (click)="conhecimento.MySql = MySql2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySql3 name="MySql" type="radio" value="3" (click)="conhecimento.MySql = MySql3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySql4 name="MySql" type="radio" value="4" (click)="conhecimento.MySql = MySql4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #MySql5 name="MySql" type="radio" value="5" (click)="conhecimento.MySql = MySql5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Salesforce *</td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce0 name="Salesforce" type="radio" value="0" (click)="conhecimento.Salesforce = Salesforce0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce1 name="Salesforce" type="radio" value="1" (click)="conhecimento.Salesforce = Salesforce1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce2 name="Salesforce" type="radio" value="2" (click)="conhecimento.Salesforce = Salesforce2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce3 name="Salesforce" type="radio" value="3" (click)="conhecimento.Salesforce = Salesforce3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce4 name="Salesforce" type="radio" value="4" (click)="conhecimento.Salesforce = Salesforce4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Salesforce5 name="Salesforce" type="radio" value="5" (click)="conhecimento.Salesforce = Salesforce5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Photoshop *</td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop0 name="Photoshop" type="radio" value="0" (click)="conhecimento.Photoshop = Photoshop0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop1 name="Photoshop" type="radio" value="1" (click)="conhecimento.Photoshop = Photoshop1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop2 name="Photoshop" type="radio" value="2" (click)="conhecimento.Photoshop = Photoshop2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop3 name="Photoshop" type="radio" value="3" (click)="conhecimento.Photoshop = Photoshop3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop4 name="Photoshop" type="radio" value="4" (click)="conhecimento.Photoshop = Photoshop4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Photoshop5 name="Photoshop" type="radio" value="5" (click)="conhecimento.Photoshop = Photoshop5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Illustrator *</td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator0 name="Illustrator" type="radio" value="0" (click)="conhecimento.Illustrator = Illustrator0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator1 name="Illustrator" type="radio" value="1" (click)="conhecimento.Illustrator = Illustrator1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator2 name="Illustrator" type="radio" value="2" (click)="conhecimento.Illustrator = Illustrator2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator3 name="Illustrator" type="radio" value="3" (click)="conhecimento.Illustrator = Illustrator3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator4 name="Illustrator" type="radio" value="4" (click)="conhecimento.Illustrator = Illustrator4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #Illustrator5 name="Illustrator" type="radio" value="5" (click)="conhecimento.Illustrator = Illustrator5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SEO *</td>
+                                <td>
+                                    <label>
+                                      <input #SEO0 name="SEO" type="radio" value="0" (click)="conhecimento.SEO = SEO0.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #SEO1 name="SEO" type="radio" value="1" (click)="conhecimento.SEO = SEO1.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #SEO2 name="SEO" type="radio" value="2" (click)="conhecimento.SEO = SEO2.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #SEO3 name="SEO" type="radio" value="3" (click)="conhecimento.SEO = SEO3.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #SEO4 name="SEO" type="radio" value="4" (click)="conhecimento.SEO = SEO4.value" />
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                      <input #SEO5 name="SEO" type="radio" value="5" (click)="conhecimento.SEO = SEO5.value" />
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Outros</label>
+                <input type="text" class="form-control" [(ngModel)]="conhecimento.Others" />
+            </div>
+            <div class="form-group col-md-12">
+                <label>Crud link</label>
+                <input type="text" class="form-control" [(ngModel)]="conhecimento.CrudProjectLink" />
+            </div>
+            <button class="btn btn-default pull-left" (click)="step = 2">Anterior</button>
+            <button class="btn btn-default pull-right" (click)="cadastrar()">Enviar cadastro</button>
+        </div>
+        <!--CONHECIMENTOS-->
+    </div>
+</div>

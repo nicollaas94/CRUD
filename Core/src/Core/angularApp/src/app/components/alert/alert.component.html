@@ -1,0 +1,26 @@
+﻿<div *ngIf="isVisible" class="alertStyle"
+     [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
+    <label>{{message.text}}</label>
+    <button class="btn btn-default button-close-alert" (click)="close()">X</button>
+</div>
+
+<style>
+    .alertStyle {
+        position: absolute;
+        right: 66px;
+        z-index: 999;
+        background: whitesmoke;
+        border-width: 1px;
+        width: 400px;
+    }
+    .button-close-alert{
+        top: 0px;
+        position: absolute;
+        right: -3px;
+        border: none;
+        background: none;
+    }
+    .button-close-alert :hover{
+        background: none;
+    }
+</style>
