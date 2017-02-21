@@ -40,7 +40,7 @@
                             <td>{{row.Cidade}}-{{row.Estado}}</td>
                             <td>{{row.Salario | currency: 'BRL' : true }}/Hora</td>
                             <td class="text-right">
-                                <button [routerLink]="['/detalhes',row.CandidatoId]" class="btn btn-xs btn-default" *ngIf="urlpath == 'listar'">Ver detalhes</button>
+                                <button [routerLink]="['/candidato',row.CandidatoId]" class="btn btn-xs btn-default" *ngIf="urlpath == 'listar'">Ver detalhes</button>
                                 <button [routerLink]="['/editar',row.CandidatoId]" class="btn btn-xs btn-default" *ngIf="urlpath == 'editar'">Editar</button>
                                 <button class="btn btn-xs btn-default" *ngIf="urlpath == 'excluir'" (click)="excluirUsuario(row.CandidatoId)">Excluir</button>
                             </td>

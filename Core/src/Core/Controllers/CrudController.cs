@@ -24,8 +24,14 @@ namespace Core.Controllers
 
         public IActionResult Cadastrar([FromBody]Candidato cand)
         {
-
             this.context.Candidatos.Add(cand);
+            this.context.SaveChanges();
+            return Ok();
+        }
+
+        public IActionResult Alterar([FromBody]Candidato cand)
+        {
+            this.context.Update(cand);
             this.context.SaveChanges();
             return Ok();
         }

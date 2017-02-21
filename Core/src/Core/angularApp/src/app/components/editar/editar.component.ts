@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CrudService } from '../../services/crud.service';
 
 @Component({
@@ -13,10 +13,10 @@ export class EditarComponent implements OnInit {
   candidato: DTO.Candidato;
   step: number;
 
-  constructor(private _service: CrudService, private route: ActivatedRoute) {
+  constructor(private _service: CrudService, private route: ActivatedRoute, private _router: Router) {
     this.step = 1;
     this.candidato = <DTO.Candidato>new Object();
-    route.url.subscribe(url => { this.urlpath = url[0].path; });
+    route.url.subscribe(url => { this.urlpath = url[0].path; });    
   }
 
   ngOnInit() {
@@ -33,6 +33,14 @@ export class EditarComponent implements OnInit {
         this.candidato = data;
       }
     );
+  }
+
+  alterar(){
+    this._service.alterarCandidato(this.candidato).subscribe(
+      data=> {
+         this._router.navigate(['/']);
+      }
+    )
   }
 
 }

@@ -23,65 +23,65 @@
         <div class="card col-md-12" *ngIf="step == 1">
             <div class="form-group col-md-12">
                 <label>Email</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Email" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Email" />
             </div>
             <div class="form-group col-md-12">
                 <label>Nome</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Nome" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Nome" />
             </div>
             <div class="form-group col-md-12">
                 <label>Skype</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Skype" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Skype" />
             </div>
             <div class="form-group col-md-12">
                 <label>Telefone</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Telefone" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Telefone" />
             </div>
             <div class="form-group col-md-12">
                 <label>Linkedin</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Linkedin" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Linkedin" />
             </div>
             <div class="form-group col-md-12">
                 <label>Cidade</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Cidade" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Cidade" />
             </div>
             <div class="form-group col-md-12">
                 <label>Estado</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Estado" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Estado" />
             </div>
             <div class="form-group col-md-12">
                 <label>Portifolio</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Portifolio" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Portifolio" />
             </div>
             <div class="form-group input-controls col-md-12">
                 <label>Qual é sua disponibilidade para trabalhar hoje? *</label>
                 <div>
                     <label>
-                        <input #dsp1 name="dispo" type="radio" [value]="1" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp1.value" />
+                        <input [disabled]="urlpath != 'editar'" #dsp1 name="dispo" type="radio" [value]="1" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp1.value" />
                         Até 4 horas por dia
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #dsp2 name="dispo" type="radio" [value]="2" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp2.value" />
+                        <input [disabled]="urlpath != 'editar'" #dsp2 name="dispo" type="radio" [value]="2" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp2.value" />
                         De 4 á 6 horas por dia
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #dsp3 name="dispo" type="radio" [value]="3" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp3.value" />
+                        <input [disabled]="urlpath != 'editar'" #dsp3 name="dispo" type="radio" [value]="3" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp3.value" />
                         De 6 á 8 horas por dia
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #dsp4 name="dispo" type="radio" [value]="4" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp4.value" />
+                        <input [disabled]="urlpath != 'editar'" #dsp4 name="dispo" type="radio" [value]="4" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp4.value" />
                         Acima de 8 horas por dia (tem certeza?)
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #dsp5 name="dispo" type="radio" [value]="5" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp5.value" />
+                        <input [disabled]="urlpath != 'editar'" #dsp5 name="dispo" type="radio" [value]="5" [(ngModel)]="candidato.Disponibilidade" (click)="candidato.Disponibilidade = dsp5.value" />
                         Apenas finais de semana
                     </label>
                 </div>
@@ -90,45 +90,45 @@
                 <label>Pra você qual é o melhor horário para trabalhar? *</label>
                 <div>
                     <label>
-                        <input #wrk1 name="periodo" type="radio" [value]="1" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk1.value" />
+                        <input [disabled]="urlpath != 'editar'" #wrk1 name="periodo" type="radio" [value]="1" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk1.value" />
                         Manhã (de 08:00 ás 12:00)
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #wrk2 name="periodo" type="radio" [value]="2" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk2.value" />
+                        <input [disabled]="urlpath != 'editar'" #wrk2 name="periodo" type="radio" [value]="2" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk2.value" />
                         Tarde (de 13:00 ás 18:00)
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #wrk3 name="periodo" type="radio" [value]="3" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk3.value" />
+                        <input [disabled]="urlpath != 'editar'" #wrk3 name="periodo" type="radio" [value]="3" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk3.value" />
                         Noite (de 19:00 as 22:00)
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #wrk4 name="periodo" type="radio" [value]="4" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk4.value" />
+                        <input [disabled]="urlpath != 'editar'" #wrk4 name="periodo" type="radio" [value]="4" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk4.value" />
                         Madrugada (de 22:00 em diante)
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #wrk5 name="periodo" type="radio" [value]="5" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk5.value" />
+                        <input [disabled]="urlpath != 'editar'" #wrk5 name="periodo" type="radio" [value]="5" [(ngModel)]="candidato.Periodo" (click)="candidato.Periodo = wrk5.value" />
                         Comercial (de 08:00 as 18:00)
                     </label>
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <label>Salário</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Salario" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Salario" />
             </div>
             <div class="form-group col-md-12">
                 <label>
                   Bank Information / Paypal / Itau etc
                   <p><small>Banco brasileiro precisa: Nome, CPF, Banco, Agencia, Conta Corrente ou Poupanca</small></p>
                 </label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.InformacaoBancaria" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.InformacaoBancaria" />
             </div>
             <button class="btn btn-default pull-right" (click)="step = 2">Próximo</button>
         </div>
@@ -137,38 +137,38 @@
         <div class="card col-md-12" *ngIf="step == 2">
             <div class="form-group col-md-12">
                 <label>Titular</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Banco.Titular" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Banco.Titular" />
             </div>
             <div class="form-group col-md-12">
                 <label>Bank / Banco ( Itau, Bradesco, ect..)</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Banco.NomeBanco" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Banco.NomeBanco" />
             </div>
             <div class="form-group col-md-12">
                 <label>CPF</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Banco.Cpf" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Banco.Cpf" />
             </div>
             <div class="form-group col-md-12">
                 <label>Agencia</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Banco.Agencia" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Banco.Agencia" />
             </div>
             <div class="form-group col-md-12">
                 <label>Account Type / Tipo de conta</label>
                 <div>
                     <label>
-                        <input #tpcnt1 name="tpcnt" type="radio" [value]="1" [(ngModel)]="candidato.Banco.TipoConta" (click)="candidato.Banco.TipoConta = tpcnt1.value" />
+                        <input [disabled]="urlpath != 'editar'" #tpcnt1 name="tpcnt" type="radio" [value]="1" [(ngModel)]="candidato.Banco.TipoConta" (click)="candidato.Banco.TipoConta = tpcnt1.value" />
                         Chain / Corrente
                     </label>
                 </div>
                 <div>
                     <label>
-                        <input #tpcnt2 name="tpcnt" type="radio" [value]="2" [(ngModel)]="candidato.Banco.TipoConta"  (click)="candidato.Banco.TipoConta = tpcnt2.value" />
+                        <input [disabled]="urlpath != 'editar'" #tpcnt2 name="tpcnt" type="radio" [value]="2" [(ngModel)]="candidato.Banco.TipoConta"  (click)="candidato.Banco.TipoConta = tpcnt2.value" />
                         Savings / Poupança
                     </label>
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <label>Account Number / Número da conta</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Banco.NumeroConta" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Banco.NumeroConta" />
             </div>
 
             <button class="btn btn-default pull-left" (click)="step = 1">Anterior</button>
@@ -199,32 +199,32 @@
                                 <td>Ionic *</td>
                                 <td>
                                     <label>
-                                      <input #ionic0 name="ionic" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic0 name="ionic" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #ionic1 name="ionic" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic1 name="ionic" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #ionic2 name="ionic" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic2 name="ionic" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #ionic3 name="ionic" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic3 name="ionic" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #ionic4 name="ionic" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic4 name="ionic" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #ionic5 name="ionic" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #ionic5 name="ionic" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Ionic" (click)="candidato.Conhecimento.Ionic = ionic5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -233,32 +233,32 @@
                                 <td>Android *</td>
                                 <td>
                                     <label>
-                                      <input #Android0 name="Android" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android0 name="Android" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Android1 name="Android" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android1 name="Android" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Android2 name="Android" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android2 name="Android" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Android3 name="Android" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android3 name="Android" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Android4 name="Android" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android4 name="Android" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Android5 name="Android" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Android5 name="Android" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Android" (click)="candidato.Conhecimento.Android = Android5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -267,32 +267,32 @@
                                 <td>IOS *</td>
                                 <td>
                                     <label>
-                                      <input #IOS0 name="IOS" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS0 name="IOS" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #IOS1 name="IOS" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS1 name="IOS" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #IOS2 name="IOS" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS2 name="IOS" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #IOS3 name="IOS" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS3 name="IOS" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #IOS4 name="IOS" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS4 name="IOS" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #IOS5 name="IOS" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #IOS5 name="IOS" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.IOS" (click)="candidato.Conhecimento.IOS = IOS5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -301,32 +301,32 @@
                                 <td>HTML *</td>
                                 <td>
                                     <label>
-                                      <input #HTML0 name="HTML" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML0 name="HTML" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #HTML1 name="HTML" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML1 name="HTML" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #HTML2 name="HTML" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML2 name="HTML" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #HTML3 name="HTML" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML3 name="HTML" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #HTML4 name="HTML" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML4 name="HTML" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #HTML5 name="HTML" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #HTML5 name="HTML" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.HTML" (click)="candidato.Conhecimento.HTML = HTML5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -335,32 +335,32 @@
                                 <td>CSS *</td>
                                 <td>
                                     <label>
-                                      <input #CSS0 name="CSS" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS0 name="CSS" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #CSS1 name="CSS" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS1 name="CSS" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #CSS2 name="CSS" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS2 name="CSS" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #CSS3 name="CSS" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS3 name="CSS" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #CSS4 name="CSS" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS4 name="CSS" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #CSS5 name="CSS" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #CSS5 name="CSS" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.CSS" (click)="candidato.Conhecimento.CSS = CSS5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -369,32 +369,32 @@
                                 <td>Bootstrap *</td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap0 name="Bootstrap" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap0 name="Bootstrap" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap1 name="Bootstrap" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap1 name="Bootstrap" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap2 name="Bootstrap" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap2 name="Bootstrap" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap3 name="Bootstrap" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap3 name="Bootstrap" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap4 name="Bootstrap" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap4 name="Bootstrap" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Bootstrap5 name="Bootstrap" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Bootstrap5 name="Bootstrap" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Bootstrap" (click)="candidato.Conhecimento.Bootstrap = Bootstrap5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -403,32 +403,32 @@
                                 <td>Jquery *</td>
                                 <td>
                                     <label>
-                                      <input #Jquery0 name="Jquery" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery0 name="Jquery" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Jquery1 name="Jquery" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery1 name="Jquery" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Jquery2 name="Jquery" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery2 name="Jquery" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Jquery3 name="Jquery" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery3 name="Jquery" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Jquery4 name="Jquery" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery4 name="Jquery" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Jquery5 name="Jquery" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Jquery5 name="Jquery" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Jquery" (click)="candidato.Conhecimento.Jquery = Jquery5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -437,32 +437,32 @@
                                 <td>AngularJs *</td>
                                 <td>
                                     <label>
-                                      <input #AngularJs0 name="AngularJs" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs0 name="AngularJs" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AngularJs1 name="AngularJs" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs1 name="AngularJs" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AngularJs2 name="AngularJs" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs2 name="AngularJs" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AngularJs3 name="AngularJs" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs3 name="AngularJs" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AngularJs4 name="AngularJs" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs4 name="AngularJs" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AngularJs5 name="AngularJs" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AngularJs5 name="AngularJs" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.AngularJs" (click)="candidato.Conhecimento.AngularJs = AngularJs5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -471,32 +471,32 @@
                                 <td>Java *</td>
                                 <td>
                                     <label>
-                                      <input #Java0 name="Java" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java0 name="Java" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Java1 name="Java" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java1 name="Java" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Java2 name="Java" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java2 name="Java" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Java3 name="Java" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java3 name="Java" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Java4 name="Java" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java4 name="Java" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Java5 name="Java" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Java5 name="Java" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Java" (click)="candidato.Conhecimento.Java = Java5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -505,32 +505,32 @@
                                 <td>AspMvc *</td>
                                 <td>
                                     <label>
-                                      <input #AspMvc0 name="AspMvc" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc0 name="AspMvc" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AspMvc1 name="AspMvc" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc1 name="AspMvc" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AspMvc2 name="AspMvc" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc2 name="AspMvc" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AspMvc3 name="AspMvc" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc3 name="AspMvc" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AspMvc4 name="AspMvc" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc4 name="AspMvc" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #AspMvc5 name="AspMvc" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #AspMvc5 name="AspMvc" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.AspMvc" (click)="candidato.Conhecimento.AspMvc = AspMvc5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -539,32 +539,32 @@
                                 <td>C *</td>
                                 <td>
                                     <label>
-                                      <input #C0 name="C" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C0 name="C" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #C1 name="C" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C1 name="C" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #C2 name="C" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C2 name="C" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #C3 name="C" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C3 name="C" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #C4 name="C" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C4 name="C" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #C5 name="C" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #C5 name="C" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.C" (click)="candidato.Conhecimento.C = C5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -573,32 +573,32 @@
                                 <td>Cpp *</td>
                                 <td>
                                     <label>
-                                      <input #Cpp0 name="Cpp" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp0 name="Cpp" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cpp1 name="Cpp" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp1 name="Cpp" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cpp2 name="Cpp" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp2 name="Cpp" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cpp3 name="Cpp" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp3 name="Cpp" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cpp4 name="Cpp" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp4 name="Cpp" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cpp5 name="Cpp" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cpp5 name="Cpp" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Cpp" (click)="candidato.Conhecimento.Cpp = Cpp5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -607,32 +607,32 @@
                                 <td>Cake *</td>
                                 <td>
                                     <label>
-                                      <input #Cake0 name="Cake" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake0 name="Cake" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cake1 name="Cake" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake1 name="Cake" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cake2 name="Cake" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake2 name="Cake" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cake3 name="Cake" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake3 name="Cake" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cake4 name="Cake" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake4 name="Cake" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Cake5 name="Cake" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Cake5 name="Cake" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Cake" (click)="candidato.Conhecimento.Cake = Cake5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -641,32 +641,32 @@
                                 <td>Django *</td>
                                 <td>
                                     <label>
-                                      <input #Django0 name="Django" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django0 name="Django" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Django1 name="Django" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django1 name="Django" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Django2 name="Django" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django2 name="Django" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Django3 name="Django" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django3 name="Django" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Django4 name="Django" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django4 name="Django" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Django5 name="Django" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Django5 name="Django" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Django" (click)="candidato.Conhecimento.Django = Django5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -675,32 +675,32 @@
                                 <td>Majento *</td>
                                 <td>
                                     <label>
-                                      <input #Majento0 name="Majento" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento0 name="Majento" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Majento1 name="Majento" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento1 name="Majento" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Majento2 name="Majento" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento2 name="Majento" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Majento3 name="Majento" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento3 name="Majento" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Majento4 name="Majento" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento4 name="Majento" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Majento5 name="Majento" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Majento5 name="Majento" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Majento" (click)="candidato.Conhecimento.Majento = Majento5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -709,32 +709,32 @@
                                 <td>PHP *</td>
                                 <td>
                                     <label>
-                                      <input #PHP0 name="PHP" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP0 name="PHP" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #PHP1 name="PHP" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP1 name="PHP" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #PHP2 name="PHP" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP2 name="PHP" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #PHP3 name="PHP" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP3 name="PHP" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #PHP4 name="PHP" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP4 name="PHP" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #PHP5 name="PHP" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #PHP5 name="PHP" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.PHP" (click)="candidato.Conhecimento.PHP = PHP5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -743,32 +743,32 @@
                                 <td>Wordpress *</td>
                                 <td>
                                     <label>
-                                      <input #Wordpress0 name="Wordpress" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress0 name="Wordpress" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Wordpress1 name="Wordpress" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress1 name="Wordpress" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Wordpress2 name="Wordpress" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress2 name="Wordpress" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Wordpress3 name="Wordpress" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress3 name="Wordpress" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Wordpress4 name="Wordpress" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress4 name="Wordpress" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Wordpress5 name="Wordpress" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Wordpress5 name="Wordpress" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Wordpress" (click)="candidato.Conhecimento.Wordpress = Wordpress5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -777,32 +777,32 @@
                                 <td>Phyton *</td>
                                 <td>
                                     <label>
-                                      <input #Phyton0 name="Phyton" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton0 name="Phyton" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Phyton1 name="Phyton" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton1 name="Phyton" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Phyton2 name="Phyton" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton2 name="Phyton" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Phyton3 name="Phyton" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton3 name="Phyton" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Phyton4 name="Phyton" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton4 name="Phyton" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Phyton5 name="Phyton" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Phyton5 name="Phyton" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Phyton" (click)="candidato.Conhecimento.Phyton = Phyton5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -811,32 +811,32 @@
                                 <td>Ruby *</td>
                                 <td>
                                     <label>
-                                      <input #Ruby0 name="Ruby" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby0 name="Ruby" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Ruby1 name="Ruby" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby1 name="Ruby" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Ruby2 name="Ruby" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby2 name="Ruby" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Ruby3 name="Ruby" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby3 name="Ruby" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Ruby4 name="Ruby" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby4 name="Ruby" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Ruby5 name="Ruby" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Ruby5 name="Ruby" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Ruby" (click)="candidato.Conhecimento.Ruby = Ruby5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -845,32 +845,32 @@
                                 <td>MySqlServer *</td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer0 name="MySqlServer" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer0 name="MySqlServer" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer1 name="MySqlServer" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer1 name="MySqlServer" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer2 name="MySqlServer" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer2 name="MySqlServer" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer3 name="MySqlServer" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer3 name="MySqlServer" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer4 name="MySqlServer" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer4 name="MySqlServer" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySqlServer5 name="MySqlServer" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySqlServer5 name="MySqlServer" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.MySqlServer" (click)="candidato.Conhecimento.MySqlServer = MySqlServer5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -879,32 +879,32 @@
                                 <td>MySql *</td>
                                 <td>
                                     <label>
-                                      <input #MySql0 name="MySql" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql0 name="MySql" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySql1 name="MySql" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql1 name="MySql" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySql2 name="MySql" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql2 name="MySql" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySql3 name="MySql" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql3 name="MySql" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySql4 name="MySql" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql4 name="MySql" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #MySql5 name="MySql" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #MySql5 name="MySql" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.MySql" (click)="candidato.Conhecimento.MySql = MySql5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -913,32 +913,32 @@
                                 <td>Salesforce *</td>
                                 <td>
                                     <label>
-                                      <input #Salesforce0 name="Salesforce" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce0 name="Salesforce" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Salesforce1 name="Salesforce" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce1 name="Salesforce" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Salesforce2 name="Salesforce" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce2 name="Salesforce" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Salesforce3 name="Salesforce" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce3 name="Salesforce" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Salesforce4 name="Salesforce" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce4 name="Salesforce" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Salesforce5 name="Salesforce" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Salesforce5 name="Salesforce" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Salesforce" (click)="candidato.Conhecimento.Salesforce = Salesforce5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -947,32 +947,32 @@
                                 <td>Photoshop *</td>
                                 <td>
                                     <label>
-                                      <input #Photoshop0 name="Photoshop" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop0 name="Photoshop" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Photoshop1 name="Photoshop" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop1 name="Photoshop" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Photoshop2 name="Photoshop" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop2 name="Photoshop" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Photoshop3 name="Photoshop" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop3 name="Photoshop" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Photoshop4 name="Photoshop" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop4 name="Photoshop" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Photoshop5 name="Photoshop" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Photoshop5 name="Photoshop" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Photoshop" (click)="candidato.Conhecimento.Photoshop = Photoshop5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -981,32 +981,32 @@
                                 <td>Illustrator *</td>
                                 <td>
                                     <label>
-                                      <input #Illustrator0 name="Illustrator" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator0 name="Illustrator" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Illustrator1 name="Illustrator" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator1 name="Illustrator" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Illustrator2 name="Illustrator" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator2 name="Illustrator" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Illustrator3 name="Illustrator" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator3 name="Illustrator" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Illustrator4 name="Illustrator" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator4 name="Illustrator" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #Illustrator5 name="Illustrator" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #Illustrator5 name="Illustrator" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.Illustrator" (click)="candidato.Conhecimento.Illustrator = Illustrator5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -1015,32 +1015,32 @@
                                 <td>SEO *</td>
                                 <td>
                                     <label>
-                                      <input #SEO0 name="SEO" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO0.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO0 name="SEO" type="radio" [value]="0" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO0.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #SEO1 name="SEO" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO1.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO1 name="SEO" type="radio" [value]="1" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO1.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #SEO2 name="SEO" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO2.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO2 name="SEO" type="radio" [value]="2" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO2.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #SEO3 name="SEO" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO3.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO3 name="SEO" type="radio" [value]="3" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO3.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #SEO4 name="SEO" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO4.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO4 name="SEO" type="radio" [value]="4" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO4.value" />
                                     </label>
                                 </td>
                                 <td>
                                     <label>
-                                      <input #SEO5 name="SEO" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO5.value" />
+                                      <input [disabled]="urlpath != 'editar'" #SEO5 name="SEO" type="radio" [value]="5" [(ngModel)]="candidato.Conhecimento.SEO" (click)="candidato.Conhecimento.SEO = SEO5.value" />
                                     </label>
                                 </td>
                                 <td></td>
@@ -1051,14 +1051,14 @@
             </div>
             <div class="form-group col-md-12">
                 <label>Outros</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Conhecimento.Others" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Conhecimento.Others" />
             </div>
             <div class="form-group col-md-12">
                 <label>Crud link</label>
-                <input type="text" class="form-control" [(ngModel)]="candidato.Conhecimento.CrudProjectLink" />
+                <input [disabled]="urlpath != 'editar'" type="text" class="form-control" [(ngModel)]="candidato.Conhecimento.CrudProjectLink" />
             </div>
             <button class="btn btn-default pull-left" (click)="step = 2">Anterior</button>
-            <button class="btn btn-default pull-right" (click)="cadastrar()">Enviar cadastro</button>
+            <button class="btn btn-default pull-right" (click)="alterar()" *ngIf="urlpath == 'editar'" >Enviar Alteração</button>
         </div>
         <!--CONHECIMENTOS-->
     </div>

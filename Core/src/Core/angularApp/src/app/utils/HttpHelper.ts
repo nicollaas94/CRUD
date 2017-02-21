@@ -43,12 +43,25 @@ export class HttpHelper {
             .catch(this._handleError);
     }
 
-    delete<T>(path: string, body: any = null) {
+    deleteaction<T>(path: string, body: any = null) {
         return this._http.delete(this._base + path + this.obj_to_query(body))
         .map(res => {
             return <T>res.json();
         })
         .catch(this._handleError);
+    }
+
+    
+    putaction(path: string, param: any = null) {
+        this.errormsg = null;
+
+        let body = JSON.stringify(param);
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this._http.put(this._base + path, body, options)
+            .map(this._handleSuccess)
+            .catch(this._handleError);
     }
 
     private _handleError(error: Response) {

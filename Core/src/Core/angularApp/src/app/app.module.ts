@@ -25,7 +25,6 @@ import { CrudService } from './services/crud.service';
 import { ListarComponent } from './components/listar/listar.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { CriarComponent } from './components/criar/criar.component';
-import { DetalhesComponent } from './components/detalhes/detalhes.component';
 
 @NgModule({
     imports:
@@ -50,7 +49,6 @@ import { DetalhesComponent } from './components/detalhes/detalhes.component';
         ListarComponent,
         EditarComponent,
         CriarComponent,
-        DetalhesComponent,
     ],
     bootstrap: [AppComponent]
 })
